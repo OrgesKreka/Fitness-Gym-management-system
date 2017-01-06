@@ -4,54 +4,27 @@
   <title>Palestra X</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="_permbajtja/foto/ikona.ico" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
   
- 
-  <style>
-      .modal-header, h4, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: center;
-      font-size: 30px;
-  }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
-  
-   .modal-header, h4, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: center;
-      font-size: 30px;
-  }
-  #footer {
-      background-color: #232323;
-      clear: both;
-      border-top:1px solid black;
-  }
-      #tablefooter{
-          border-collapse: separate;
-    border-spacing: 100px 10px;
-      }
-   .container-inner {
-    max-width: 1380px;
-    width: 100%;
-    margin: 0 auto;
-}   
-  </style>
-</head>
-<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+	<link rel="stylesheet" href="_permbajtja/_permbajtjaIndex/css/style.css">
+
+</head>
+
+
+<body>
 
 <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">
         <span class="icon-bar"></span>
@@ -62,14 +35,14 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="file:///C:/Users/User/Desktop/index.html">Kryefaqja</a></li>
+        <li class="active"><a href="index.html">Kryefaqja</a></li>
         <li><a href="#">Forumi</a></li>
         <li><a href="file:///C:/Users/User/Desktop/about.html">Rreth Nesh</a></li>
-        <li><a href="file:///C:/Users/User/Desktop/Kontakt.html">Kontakt</a></li>
+        <li><a href="_permbajtja/_permbajtjaIndex/php/Kontakt.php">Kontakt</a></li>
       </ul>
         <form class="navbar-form navbar-left">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search" >
+        <input type="text" class="form-control" placeholder="Kerko" >
       </div>
       <button type="submit" class="btn btn-default">Kerko</button>
     </form>
@@ -130,24 +103,25 @@
                     <!-- Forma Modale e Identifikimit-->
   <div class="modal fade" id="modalIdentifikimi" role="dialog">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4><span class="glyphicon glyphicon-lock"></span> Identifikohu</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
+
+                                 <!-->Forma</!-->
+          <form role="form" method="POST" action="_permbajtja/_permbajtjaIndex/php/identifikohu.php">
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Emri Perdoruesit</label>
-              <input type="text" class="form-control" id="usrname" placeholder="jepni emailin">
+              <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="Jepni emailin">
             </div>
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Fjalekalimi</label>
-              <input type="text" class="form-control" id="psw" placeholder="Jepni fjalekalimin">
+              <label for="fjalekalim"><span class="glyphicon glyphicon-eye-open"></span> Fjalekalimi</label>
+              <input type="password" class="form-control" id="fjalekalim" name="fjalekalim" placeholder="Jepni fjalekalimin">
             </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Identifikohu</button>
+              <button type="submit" class="btn btn-success btn-block" name="identifikohu" onclick="verifiko()"><span class="glyphicon glyphicon-off"></span> Identifikohu</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -162,11 +136,11 @@
                     <!-- Karuseli -->
 <div class="fotorama" data-loop="true" data-autoplay="true" data-keyboard="true" data-swipe="true">
 
-  <img src="foto/1.png" alt="foto1">
-  <img src="foto/2.png">
-  <img src="foto/3.png">
-  <img src="foto/4.png">
-  <img src="foto/5.png">
+  <img src="_permbajtja/foto/1.png" alt="foto1">
+  <img src="_permbajtja/foto/2.png">
+  <img src="_permbajtja/foto/3.png">
+  <img src="_permbajtja/foto/4.png">
+  <img src="_permbajtja/foto/5.png">
 </div>
 
 
@@ -229,7 +203,7 @@
                         <a href="#" class="list-group-item">Link</a>
                         <a href="#" class="list-group-item">Link</a>
                         <a href="#" class="list-group-item">Link</a>
-                        <a href="#" class="list-group-item">Kontakt</a>
+                        <a href="_permbajtja/_permbajtjaIndex/php/Kontakt.php" class="list-group-item">Kontakt</a>
                     </div>
                 </div><!--/.sidebar-offcanvas-->
             </div><!--/row-->
@@ -240,16 +214,14 @@
 		
 		<!---FOOTER-->
         <footer id="footer">
-            <form action="#" method="post" accept-charset="utf-8">
-            
-
+          
               <table id="tablefooter" border="0">
                
-                  <th style="color:white;vertical-align:top"><b><u>INFORMOHU</u></b><br><br>
+                  <th style="color:white; vertical-align:top; text-align: center;"><b><u>INFORMOHU</u></b><br><br>
                    
                       <ul>
                       <li><a href="about.html" style="color:white;"><b>Rreth Nesh</b></a></li>
-                      <li><a href="file:///C:/Users/User/Desktop/Kontakt.html" style="color:white;"><b>Kontakt</b></a></li>              
+                      <li><a href="_permbajtja/_permbajtjaIndex/php/Kontakt.php" target="_blank" style="color:white;"><b>Kontakt</b></a></li>              
                       </ul>   
                       
                   <ul> 
@@ -261,26 +233,37 @@
                   </ul>
                   
                   
-                  <th style="color:white;vertical-align:top;"><b><u>SUBSCRIBE</u></b><br><br>
+                  <th style=" color:white; vertical-align:top; text-align: center;"><b><u>SUBSCRIBE</u></b><br><br>
                       <p style="color:white;"><b>Njoftohu me një email për çdo të re nga Palestra X</b></p><br>
                       
-                      <input type="email" name="stextfield" required="required"><br>
-                      <input type="button" style="color:black;" name="subscribe" onclick="Subscribe()" value="Subscribe">
-                 
-                  <th style="color:white;vertical-align:top;"><b><u>NA NDIQNI</u></b><br><br>
+                    <form action="_permbajtja/_permbajtjaIndex/php/subscribe.php" method="POST">
+
+                          <div class="form-group">
+                              <div style="text-align: center;">
+                                  <label for="email">Adresa Emailit:</label>
+                              </div>
+
+                              <input style="color:black;" type="email" class="form-control" id="email" name="emailiKerkuar">
+                          </div>
+                          
+                          <div style="text-align: center;">
+                            <button align="middle" type="submit" class="btn btn-default">Subscribe</button>
+                          </div>
+                    </form>
+
+                  <th style="color:white; vertical-align: middle; text-align: center;"><b><u>NA NDIQNI</u></b><br><br>
                       
-                          <a class="facebook" href="https://www.facebook.com/palestraX"><img width="45" height="45" alt="fb"  src="http://preston.by/images/facebook_socialnetwork_20047.png"></a><br>
-                          <a class="instagram" href="https://www.instagram.com/palestraX"><img width="40" height="40" alt="insta" src="https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.com/icon/instagram_logos_app_icon/YyepHGHDvkl1wFkUHw8Y/Instagram-v051916_200.png"></a><br>
-                          <a class="youtube" href="https://www.youtube.com/palestraX"><img width="43" height="43" alt="yt"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Youtube_icon.svg/600px-Youtube_icon.svg.png"></a>
+                          <a class="facebook" href="https://www.facebook.com/palestraX"><img width="45" height="45" alt="fb"  src="http://preston.by/images/facebook_socialnetwork_20047.png"></a> <p></p>
+                          <a class="instagram" href="https://www.instagram.com/palestraX"><img width="40" height="40" alt="insta" src="https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.com/icon/instagram_logos_app_icon/YyepHGHDvkl1wFkUHw8Y/Instagram-v051916_200.png"></a> <p></p>
+                          <a class="youtube" href="https://www.youtube.com/palestraX"><img width="43" height="43" alt="yt"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Youtube_icon.svg/600px-Youtube_icon.svg.png"></a> <p></p>
                           <a class="twitter" href="https://www.twitter.com/palestraX"><img width="43" height="43" alt="tw"  src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png"></a>
                   
-                  <th style="color:white;vertical-align:top;"><b><u>KU NDODHEMI</u></b><br><br>
+                  <th style="color:white;vertical-align:top; text-align: center;"><b><u>KU NDODHEMI</u></b><br><br>
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2868742160704!2d19.8070851154238!3d41.32437487926988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503106ce23ca25%3A0xefa6e52c8c15678f!2sRruga+Myslym+Shyri%2C+Tiran%C3%AB%2C+Albania!5e0!3m2!1sen!2s!4v1480963455345" 
 					  width="400" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                           
                     
                 </table>
-                </form>
                     
 <section class="container" id="footer-bottom">
       <div class="container-inner">
@@ -292,29 +275,7 @@
 
   </footer> <!--/#footer-->
 
-
-
-<script>
-
-    $(document).ready(function(){
-    $("#identifikohu").click(function(){
-        $("#modalIdentifikimi").modal();
-    });
-});
-
-
-    $(document).ready(function(){
-    $("#regjistrohu").click(function(){
-        $("#modalRegjistrimi").modal();
-    });
-});
-
-    var autocompleteOFF = document.querySelectorAll( "input" );
-    for( var i = 0; i < autocompleteOFF.length; i++ )
-    {
-        autocompleteOFF[ i ].autocomplete = "off";
-    }
-</script>
-
+  <script src="_permbajtja/_permbajtjaIndex/js/index.js" ></script>
+  
 </body>
 </html>
