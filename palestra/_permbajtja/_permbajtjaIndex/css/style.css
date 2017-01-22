@@ -1,0 +1,48 @@
+a:hover
+{
+  cursor:hand;
+}
+/** FORMA modale */
+.modal-header, h4, .close 
+  {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 20px;
+  }
+
+  .modal-footer 
+  {
+      background-color: #f9f9f9;
+  }
+  
+   .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 20px;
+  }
+
+
+/**Fundi i faqes*/
+  #footer
+  {
+      background-color: #232323;
+      clear: both;
+      border-top:1px solid black;
+  }
+
+  #tablefooter
+  {
+    border-collapse: separate;
+    border-spacing: 100px 10px;
+  }
+
+
+   .container-inner 
+   {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    }   
+
